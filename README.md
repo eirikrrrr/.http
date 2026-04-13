@@ -1,5 +1,7 @@
 # .http//
 
+dot//http is a file-driven HTTP request runner backed by curl.
+
 dot//http is designed to make HTTP interactions reproducible, scriptable, and easy to reason about. Instead of relying on GUI clients or ad-hoc curl commands, requests are declared in a clean, human-readable format that closely resembles raw HTTP.
 
 The tool parses these .http files, resolves variables, and executes the request using curl as its underlying engine. This approach leverages curl’s reliability while providing a higher-level, file-based workflow.
