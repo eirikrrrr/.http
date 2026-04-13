@@ -15,3 +15,48 @@ Execute the same request against multiple targets
 CLI-first design for automation and integration into scripts
 
 dot//http focuses on clarity and reproducibility over complexity. It is not a full-featured API client, but a minimal, composable tool for developers who prefer working close to the protocol.
+
+
+## Development
+
+### Scalffold
+
+```
+
+dothttp/
+├── pyproject.toml
+├── README.md
+├── .gitignore
+├── src/
+│   └── dothttp/
+│       ├── __init__.py
+│       ├── cli.py
+│       ├── errors.py
+│       ├── models.py
+│       ├── constants.py
+│       ├── parser/
+│       │   ├── __init__.py
+│       │   ├── http_file.py
+│       │   └── variables.py
+│       ├── validator/
+│       │   ├── __init__.py
+│       │   └── request.py
+│       ├── executor/
+│       │   ├── __init__.py
+│       │   ├── curl_builder.py
+│       │   ├── runner.py
+│       │   └── results.py
+│       ├── loaders/
+│       │   ├── __init__.py
+│       │   └── variable_sets.py
+│       └── utils/
+│           ├── __init__.py
+│           └── text.py
+└── tests/
+    ├── test_parser.py
+    ├── test_renderer.py
+    ├── test_validator.py
+    ├── test_curl_builder.py
+    └── test_runner.py
+
+```
